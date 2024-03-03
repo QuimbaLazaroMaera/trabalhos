@@ -14,7 +14,7 @@ public class selection_sort_Recusrivo {
             int eleito = arr[i-1];
             int menor = arr[i];
             int posicaoMenor = i;
-         if(arr[i-1]<eleito ){
+         if(eleito<a[i] ){
             menor = arr[i-1];
             posicaoMenor = i-1;
          } 
