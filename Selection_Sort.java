@@ -2,21 +2,22 @@ package Exercicios;
 public class Selection_Sort {
     public static void metodo(int [] x){
         
-        for(int i=0;i<x.length-1;i++){
-           int  eleito = x[i];
-            int menor = x[i+1];
-            int posicao = i+1;
-         for(int j=i+1;j<x.length;j++){
-             if(x[j]<eleito){
-                 menor= x[j];
-                 posicao = j;
+         for(int i=0;i<x.length-1;i++)
+        {
+           int  posicaoMenor = i;
+            
+         for(int j=i+1;j<x.length;j++)
+         {
+             if(x[j]<x[posicaoMenor])
+             {
+                 posicaoMenor  = j;
              }
              
          }
-          if(menor<eleito){
-                 x[i] = menor;
-                 x[posicao]= eleito;
-             }
+          
+          int aux =x[posicaoMenor] ;
+          x[ posicaoMenor ] = x[i];
+                 x[i]= aux;
            
         }
         for(int i=0;i<x.length;i++){
